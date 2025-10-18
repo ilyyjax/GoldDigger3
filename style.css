@@ -1,0 +1,243 @@
+/* =============================
+   GOLDDIGGER RETRO THEME
+============================= */
+
+body {
+  background: #1b0f07;
+  color: #fff8dc;
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =============================
+   START SCREEN
+============================= */
+.menu-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#d4a017, #4b2e05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-screen h1 {
+  font-size: 28px;
+  text-shadow: 2px 2px #000;
+}
+
+.subtitle {
+  font-size: 12px;
+  margin: 8px 0 16px;
+}
+
+.menu-btn {
+  background: #3a2607;
+  border: 3px solid #d4a017;
+  color: #fff8dc;
+  padding: 12px 30px;
+  margin: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 12px;
+}
+
+.menu-btn:hover {
+  background: #d4a017;
+  color: #3a2607;
+}
+
+.menu-btn.danger {
+  border-color: #ff4d4d;
+  color: #ffcccc;
+}
+.menu-btn.danger:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+/* =============================
+   TOP & BOTTOM BARS
+============================= */
+#topBar, #bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3a2607;
+  padding: 6px 12px;
+  font-size: 10px;
+}
+
+#money {
+  font-size: 12px;
+}
+
+#energyContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#energyBar {
+  width: 100px;
+  height: 10px;
+  background: #444;
+  border: 1px solid #fff8dc;
+  position: relative;
+}
+
+#energyFill {
+  height: 100%;
+  width: 100%;
+  background: #00ff66;
+  transition: width 0.2s linear;
+}
+
+#buttons button {
+  font-size: 10px;
+  padding: 6px 10px;
+  background: #4b2e05;
+  border: 2px solid #d4a017;
+  color: #fff8dc;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#buttons button:hover {
+  background: #d4a017;
+  color: #3a2607;
+}
+
+/* =============================
+   CANVAS AREA
+============================= */
+#gameCanvas {
+  display: block;
+  width: 100vw;
+  height: 80vh;
+  background: #2a1b0a;
+}
+
+/* =============================
+   INVENTORY / SELL BAR
+============================= */
+#bottomBar {
+  font-size: 10px;
+}
+
+#sellButton {
+  background: #4b2e05;
+  border: 2px solid #d4a017;
+  color: #fff8dc;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+#sellButton:hover {
+  background: #d4a017;
+  color: #3a2607;
+}
+
+#inventory {
+  text-align: right;
+  flex: 1;
+  font-size: 10px;
+}
+
+/* =============================
+   SHOP MENU
+============================= */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #3a2607;
+  border: 3px solid #d4a017;
+  color: #fff8dc;
+  padding: 20px;
+  width: 320px;
+  z-index: 99;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.popup h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#upgradeList {
+  text-align: left;
+  font-size: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#upgradeList button {
+  float: right;
+  background: #4b2e05;
+  border: 1px solid #d4a017;
+  color: #fff8dc;
+  cursor: pointer;
+  padding: 3px 8px;
+  font-size: 8px;
+}
+
+#upgradeList button:hover {
+  background: #d4a017;
+  color: #3a2607;
+}
+
+/* =============================
+   FLOATING TEXT EFFECTS
+============================= */
+#floatingContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.float-text {
+  position: absolute;
+  font-size: 10px;
+  color: #00ff66;
+  animation: floatUp 1s ease-out forwards;
+}
+
+@keyframes floatUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 600px) {
+  #energyBar {
+    width: 60px;
+  }
+  .menu-btn {
+    font-size: 10px;
+    padding: 8px 16px;
+  }
+}
