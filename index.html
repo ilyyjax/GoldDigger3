@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoldDigger</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 🟨 Start Screen -->
+  <div id="startScreen" class="menu-screen">
+    <h1>💎 GoldDigger 💎</h1>
+    <p class="subtitle">Dig deep. Get rich. Upgrade your gear.</p>
+    <button id="startButton" class="menu-btn">Start Game</button>
+    <button id="continueButton" class="menu-btn">Continue</button>
+    <button id="resetButton" class="menu-btn danger">Reset Save</button>
+  </div>
+
+  <!-- 🟦 Game UI -->
+  <div id="gameUI" class="hidden">
+    <div id="topBar">
+      <div id="money">💰 0</div>
+      <div id="energyContainer">
+        <div id="energyBar"><div id="energyFill"></div></div>
+        <span id="energyText">100%</span>
+      </div>
+      <div id="buttons">
+        <button id="upgradeButton">🔨 Upgrades</button>
+        <button id="muteButton">🔈</button>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="bottomBar">
+      <button id="sellButton">Sell All</button>
+      <div id="inventory"></div>
+    </div>
+  </div>
+
+  <!-- 🛠️ Upgrade Shop -->
+  <div id="shopMenu" class="popup hidden">
+    <h2>🔨 Upgrades</h2>
+    <div id="upgradeList"></div>
+    <button id="closeShop" class="menu-btn">Close</button>
+  </div>
+
+  <!-- 🟩 Floating Notifications -->
+  <div id="floatingContainer"></div>
+
+  <!-- 🔊 Audio -->
+  <audio id="mineSound" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_7a6f7b1ce7.mp3?filename=pickaxe-hit.mp3"></audio>
+  <audio id="cashSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_91d02007cf.mp3?filename=coin-cash.mp3"></audio>
+  <audio id="buySound" src="https://cdn.pixabay.com/download/audio/2021/09/14/audio_0a43eb50a3.mp3?filename=buy-sound.mp3"></audio>
+  <audio id="bgMusic" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_648b1ac998.mp3?filename=retro-game-loop.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
